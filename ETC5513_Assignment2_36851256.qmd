@@ -16,8 +16,8 @@ This guide demonstrates the basic steps required to create a reproducible projec
 
 The purpose of this guide is to establish the foundation for version control and collaborative practices using Git and GitHub.
 
-# 1. Create a New RStudio Project and Render a Quarto File
-## Step 1: Create a New RStudio Project
+## 1. Create a New RStudio Project and Render a Quarto File
+### Step 1: Create a New RStudio Project
 A new RStudio Project was created to organise all files related to the analysis in a single folder. Creating a project ensures that all files are stored in one location and can be easily managed. It also supports reproducibility by keeping the working environment consistent.
 
 To create a new project in RStudio:
@@ -32,7 +32,7 @@ To create a new project in RStudio:
 
 After completing these steps, a new folder containing an `.Rproj` file will be created.
 
-## Step 2: Create a Quarto File Named example.qmd
+### Step 2: Create a Quarto File Named example.qmd
 Inside the project folder, create a new Quarto document named `example.qmd`, as following steps. The Quarto file allows code, text, and results to be combined into one document. This makes the analysis transparent and reproducible.
 
 1) To create the file, click File → New File → Quarto Document.
@@ -148,12 +148,12 @@ penguins %>%
   head(5)
 ```
 
-## Step 3: Render the Quarto File into an HTML Document
+### Step 3: Render the Quarto File into an HTML Document
 To generate the HTML output, click the **Render** button in RStudio. After rendering, an HTML file named `example.html` will be created in the project folder. Rendering the document converts the source file into a final report that includes both the code and the output. This ensures that results are automatically updated whenever the code changes.
 
 When the file is rendered successfully, the output will display the result of the Quarto file. This confirms that the Quarto document has been successfully knitted into an HTML file and demonstrates the integration of code and output within a reproducible report.
 
-## Your Folder Should Look Like
+### Your Folder Should Look Like
 ````markdown
 gitguide_project/
     example.qmd
@@ -161,10 +161,10 @@ gitguide_project/
     gitguide_project.Rproj
 ````
 
-# 2. Connect the Project to GitHub Using the Command Line Interface
+## 2. Connect the Project to GitHub Using the Command Line Interface
 The project folder (`gitguide_project`) was connected to a GitHub repository using the command line interface. This allows project files to be tracked, shared, and synchronised using version control.
 
-## Step 1: Create a Repository on GitHub
+### Step 1: Create a Repository on GitHub
 A new repository was created on GitHub to store the project files online. Creating a repository on GitHub provides a remote location to store and share project files. It allows version control to be used for collaboration and backup.
 
 To create the repository:
@@ -176,12 +176,12 @@ To create the repository:
 5) Add a README file
 6) Click Create repository
 
-## Step 2: Open the Command Line Interface in RStudio
+### Step 2: Open the Command Line Interface in RStudio
 The terminal was opened in RStudio to run Git commands. The command line interface allows Git commands to be executed directly within the project folder, enabling version control operations.
 
 To open the terminal: Tools → Terminal → New Terminal
 
-## Step 3: Clone the GitHub Repository
+### Step 3: Clone the GitHub Repository
 Cloning the repository creates a local copy of the GitHub repository and automatically sets up version control for the project.
 
 The GitHub repository was downloaded to the local computer by the SSH key from GitHub using the following command:
@@ -189,7 +189,7 @@ The GitHub repository was downloaded to the local computer by the SSH key from G
 
 After running the command, a new folder named `gitguide_project` was created.
 
-## Step 4: Add Project Files to the Repository Folder
+### Step 4: Add Project Files to the Repository Folder
 All project files must be inside the repository folder so that Git can track changes to those files. So, place files created in 1 into the cloned repository folder.
 
 ````markdown
@@ -199,14 +199,14 @@ gitguide_project/
     gitguide_project.Rproj
 ````
 
-## Step 5: Add Files to the Repository
+### Step 5: Add Files to the Repository
 All files were added to the staging area using:
 ````markdown 
 git add .
 ````
 Adding files prepares them to be saved in the repository.
 
-## Step 6: Create a Commit
+### Step 6: Create a Commit
 The files were updated to local repository using:
 ````markdown 
 git commit -m "Add project files"
@@ -214,14 +214,14 @@ git commit -m "Add project files"
 
 A commit records the current state of the project and creates a version history.
 
-## Step 7: Push the Files to GitHub
+### Step 7: Push the Files to GitHub
 The files were uploaded to the remote GitHub repository (`gitguide_project`) using:
 ````markdown 
 git push
 ````
 Pushing synchronises the local project with the remote repository, ensuring that all files are stored online and can be shared.
 
-## Step 8: Check the Repository Status
+### Step 8: Check the Repository Status
 The status of the repository was checked using: 
 ````markdown 
 git status
@@ -229,3 +229,53 @@ git status
 This command shows which files have been added or modified and confirms that Git is tracking the project.
 
 The project folder was successfully connected to the GitHub repository. All project files were uploaded to GitHub, confirming that version control has been correctly established using the command line interface.
+
+
+## 3. Create a New Branch and Update the Project
+A new branch named `testbranch` was created to modify the `example.qmd` file without affecting the main version. Branching allows different versions of a project to be developed independently and supports collaboration in version control systems.
+
+### Step 1: Create a New Branch
+A new branch called `testbranch` was created using the command line interface. Creating a branch allows changes to be made separately from the main project. This prevents accidental changes to the main version and allows different features to be developed independently.
+````markdown 
+git branch testbranch
+````
+### Step 2: Switch to the New Branch
+The working environment was switched to the new branch using below command. Switching branches ensures that any changes made will only affect the selected branch. This allows safe modification of project files.
+````markdown 
+git checkout testbranch
+````
+### Step 3: Modify the File example.qmd
+The file `example.qmd` was opened in RStudio and updated by adding new content. Below modification was added in the testbranch to demonstrate updating a file using version control. 
+
+````markdown 
+### Additional Section
+This is modification for testbranch branch
+````
+### Step 4: Add the Updated File to the Repository
+The modified file was added to the staging area using:
+````markdown 
+git add example.qmd
+````
+Adding the file prepares the updated version to be recorded in the project history.
+
+### Step 5: Create a Commit
+Creating a commit records the changes and creates a new version of the project that can be tracked over time. The changes were saved as a new version of the project using:
+````markdown 
+git commit -m "Update example.qmd in testbranch"
+````
+### Step 6: Push the Branch to the Remote Repository
+The new branch (`testbranch`) and its changes were uploaded to the remote GitHub repository using:
+````markdown 
+git push origin testbranch
+````
+Pushing the branch ensures that the updated version of the project is stored on GitHub and can be accessed or reviewed by others.
+
+### Step 8: Check the Repository Status
+The repository status was checked using below command. This command confirms that the file has been modified and shows which changes are ready to be saved.
+````markdown 
+git status
+````
+
+As a result, a new branch named `testbranch` was successfully created. The file `example.qmd` was modified, and the changes were saved in both the local repository and the remote GitHub repository. This demonstrates how version control can be used to manage updates safely using branches.
+
+## 

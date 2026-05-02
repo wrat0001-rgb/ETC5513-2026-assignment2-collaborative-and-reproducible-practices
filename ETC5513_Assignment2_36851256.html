@@ -105,6 +105,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#step-7-push-the-files-to-github" id="toc-step-7-push-the-files-to-github" class="nav-link" data-scroll-target="#step-7-push-the-files-to-github">Step 7: Push the Files to GitHub</a></li>
   <li><a href="#step-8-check-the-repository-status" id="toc-step-8-check-the-repository-status" class="nav-link" data-scroll-target="#step-8-check-the-repository-status">Step 8: Check the Repository Status</a></li>
   </ul></li>
+  <li><a href="#create-a-new-branch-and-update-the-project" id="toc-create-a-new-branch-and-update-the-project" class="nav-link" data-scroll-target="#create-a-new-branch-and-update-the-project">3. Create a New Branch and Update the Project</a>
+  <ul class="collapse">
+  <li><a href="#step-1-create-a-new-branch" id="toc-step-1-create-a-new-branch" class="nav-link" data-scroll-target="#step-1-create-a-new-branch">Step 1: Create a New Branch</a></li>
+  <li><a href="#step-2-switch-to-the-new-branch" id="toc-step-2-switch-to-the-new-branch" class="nav-link" data-scroll-target="#step-2-switch-to-the-new-branch">Step 2: Switch to the New Branch</a></li>
+  <li><a href="#step-3-modify-the-file-example.qmd" id="toc-step-3-modify-the-file-example.qmd" class="nav-link" data-scroll-target="#step-3-modify-the-file-example.qmd">Step 3: Modify the File example.qmd</a></li>
+  <li><a href="#step-4-add-the-updated-file-to-the-repository" id="toc-step-4-add-the-updated-file-to-the-repository" class="nav-link" data-scroll-target="#step-4-add-the-updated-file-to-the-repository">Step 4: Add the Updated File to the Repository</a></li>
+  <li><a href="#step-5-create-a-commit" id="toc-step-5-create-a-commit" class="nav-link" data-scroll-target="#step-5-create-a-commit">Step 5: Create a Commit</a></li>
+  <li><a href="#step-6-push-the-branch-to-the-remote-repository" id="toc-step-6-push-the-branch-to-the-remote-repository" class="nav-link" data-scroll-target="#step-6-push-the-branch-to-the-remote-repository">Step 6: Push the Branch to the Remote Repository</a></li>
+  <li><a href="#step-8-check-the-repository-status-1" id="toc-step-8-check-the-repository-status-1" class="nav-link" data-scroll-target="#step-8-check-the-repository-status-1">Step 8: Check the Repository Status</a></li>
+  </ul></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="ETC5513_Assignment2_36851256.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li></ul></div></nav>
 </div>
@@ -143,10 +154,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>This guide demonstrates the basic steps required to create a reproducible project using RStudio and Quarto. Reproducible reporting ensures that analyses can be rerun and produce consistent results by combining code, output, and documentation in a single workflow.</p>
 <p>The purpose of this guide is to establish the foundation for version control and collaborative practices using Git and GitHub.</p>
-<section id="create-a-new-rstudio-project-and-render-a-quarto-file" class="level1">
-<h1>1. Create a New RStudio Project and Render a Quarto File</h1>
-<section id="step-1-create-a-new-rstudio-project" class="level2">
-<h2 class="anchored" data-anchor-id="step-1-create-a-new-rstudio-project">Step 1: Create a New RStudio Project</h2>
+<section id="create-a-new-rstudio-project-and-render-a-quarto-file" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-new-rstudio-project-and-render-a-quarto-file">1. Create a New RStudio Project and Render a Quarto File</h2>
+<section id="step-1-create-a-new-rstudio-project" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-create-a-new-rstudio-project">Step 1: Create a New RStudio Project</h3>
 <p>A new RStudio Project was created to organise all files related to the analysis in a single folder. Creating a project ensures that all files are stored in one location and can be easily managed. It also supports reproducibility by keeping the working environment consistent.</p>
 <p>To create a new project in RStudio:</p>
 <ol type="1">
@@ -160,8 +171,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>After completing these steps, a new folder containing an <code>.Rproj</code> file will be created.</p>
 </section>
-<section id="step-2-create-a-quarto-file-named-example.qmd" class="level2">
-<h2 class="anchored" data-anchor-id="step-2-create-a-quarto-file-named-example.qmd">Step 2: Create a Quarto File Named example.qmd</h2>
+<section id="step-2-create-a-quarto-file-named-example.qmd" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-create-a-quarto-file-named-example.qmd">Step 2: Create a Quarto File Named example.qmd</h3>
 <p>Inside the project folder, create a new Quarto document named <code>example.qmd</code>, as following steps. The Quarto file allows code, text, and results to be combined into one document. This makes the analysis transparent and reproducible.</p>
 <ol type="1">
 <li>To create the file, click File → New File → Quarto Document.</li>
@@ -321,24 +332,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="step-3-render-the-quarto-file-into-an-html-document" class="level2">
-<h2 class="anchored" data-anchor-id="step-3-render-the-quarto-file-into-an-html-document">Step 3: Render the Quarto File into an HTML Document</h2>
+<section id="step-3-render-the-quarto-file-into-an-html-document" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-render-the-quarto-file-into-an-html-document">Step 3: Render the Quarto File into an HTML Document</h3>
 <p>To generate the HTML output, click the <strong>Render</strong> button in RStudio. After rendering, an HTML file named <code>example.html</code> will be created in the project folder. Rendering the document converts the source file into a final report that includes both the code and the output. This ensures that results are automatically updated whenever the code changes.</p>
 <p>When the file is rendered successfully, the output will display the result of the Quarto file. This confirms that the Quarto document has been successfully knitted into an HTML file and demonstrates the integration of code and output within a reproducible report.</p>
 </section>
-<section id="your-folder-should-look-like" class="level2">
-<h2 class="anchored" data-anchor-id="your-folder-should-look-like">Your Folder Should Look Like</h2>
+<section id="your-folder-should-look-like" class="level3">
+<h3 class="anchored" data-anchor-id="your-folder-should-look-like">Your Folder Should Look Like</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>gitguide_project/</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    example.qmd</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    example.html</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    gitguide_project.Rproj</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
-<section id="connect-the-project-to-github-using-the-command-line-interface" class="level1">
-<h1>2. Connect the Project to GitHub Using the Command Line Interface</h1>
+<section id="connect-the-project-to-github-using-the-command-line-interface" class="level2">
+<h2 class="anchored" data-anchor-id="connect-the-project-to-github-using-the-command-line-interface">2. Connect the Project to GitHub Using the Command Line Interface</h2>
 <p>The project folder (<code>gitguide_project</code>) was connected to a GitHub repository using the command line interface. This allows project files to be tracked, shared, and synchronised using version control.</p>
-<section id="step-1-create-a-repository-on-github" class="level2">
-<h2 class="anchored" data-anchor-id="step-1-create-a-repository-on-github">Step 1: Create a Repository on GitHub</h2>
+<section id="step-1-create-a-repository-on-github" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-create-a-repository-on-github">Step 1: Create a Repository on GitHub</h3>
 <p>A new repository was created on GitHub to store the project files online. Creating a repository on GitHub provides a remote location to store and share project files. It allows version control to be used for collaboration and backup.</p>
 <p>To create the repository:</p>
 <ol type="1">
@@ -350,50 +361,96 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Click Create repository</li>
 </ol>
 </section>
-<section id="step-2-open-the-command-line-interface-in-rstudio" class="level2">
-<h2 class="anchored" data-anchor-id="step-2-open-the-command-line-interface-in-rstudio">Step 2: Open the Command Line Interface in RStudio</h2>
+<section id="step-2-open-the-command-line-interface-in-rstudio" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-open-the-command-line-interface-in-rstudio">Step 2: Open the Command Line Interface in RStudio</h3>
 <p>The terminal was opened in RStudio to run Git commands. The command line interface allows Git commands to be executed directly within the project folder, enabling version control operations.</p>
 <p>To open the terminal: Tools → Terminal → New Terminal</p>
 </section>
-<section id="step-3-clone-the-github-repository" class="level2">
-<h2 class="anchored" data-anchor-id="step-3-clone-the-github-repository">Step 3: Clone the GitHub Repository</h2>
+<section id="step-3-clone-the-github-repository" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-clone-the-github-repository">Step 3: Clone the GitHub Repository</h3>
 <p>Cloning the repository creates a local copy of the GitHub repository and automatically sets up version control for the project.</p>
 <p>The GitHub repository was downloaded to the local computer by the SSH key from GitHub using the following command: <code>git clone https://github.com/username/gitguide_project.git</code></p>
 <p>After running the command, a new folder named <code>gitguide_project</code> was created.</p>
 </section>
-<section id="step-4-add-project-files-to-the-repository-folder" class="level2">
-<h2 class="anchored" data-anchor-id="step-4-add-project-files-to-the-repository-folder">Step 4: Add Project Files to the Repository Folder</h2>
+<section id="step-4-add-project-files-to-the-repository-folder" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-add-project-files-to-the-repository-folder">Step 4: Add Project Files to the Repository Folder</h3>
 <p>All project files must be inside the repository folder so that Git can track changes to those files. So, place files created in 1 into the cloned repository folder.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>gitguide_project/</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    example.qmd</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    example.html</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    gitguide_project.Rproj</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="step-5-add-files-to-the-repository" class="level2">
-<h2 class="anchored" data-anchor-id="step-5-add-files-to-the-repository">Step 5: Add Files to the Repository</h2>
+<section id="step-5-add-files-to-the-repository" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-add-files-to-the-repository">Step 5: Add Files to the Repository</h3>
 <p>All files were added to the staging area using:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>git add .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Adding files prepares them to be saved in the repository.</p>
 </section>
-<section id="step-6-create-a-commit" class="level2">
-<h2 class="anchored" data-anchor-id="step-6-create-a-commit">Step 6: Create a Commit</h2>
+<section id="step-6-create-a-commit" class="level3">
+<h3 class="anchored" data-anchor-id="step-6-create-a-commit">Step 6: Create a Commit</h3>
 <p>The files were updated to local repository using:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>git commit -m "Add project files"</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>A commit records the current state of the project and creates a version history.</p>
 </section>
-<section id="step-7-push-the-files-to-github" class="level2">
-<h2 class="anchored" data-anchor-id="step-7-push-the-files-to-github">Step 7: Push the Files to GitHub</h2>
+<section id="step-7-push-the-files-to-github" class="level3">
+<h3 class="anchored" data-anchor-id="step-7-push-the-files-to-github">Step 7: Push the Files to GitHub</h3>
 <p>The files were uploaded to the remote GitHub repository (<code>gitguide_project</code>) using:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>git push</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Pushing synchronises the local project with the remote repository, ensuring that all files are stored online and can be shared.</p>
 </section>
-<section id="step-8-check-the-repository-status" class="level2">
-<h2 class="anchored" data-anchor-id="step-8-check-the-repository-status">Step 8: Check the Repository Status</h2>
+<section id="step-8-check-the-repository-status" class="level3">
+<h3 class="anchored" data-anchor-id="step-8-check-the-repository-status">Step 8: Check the Repository Status</h3>
 <p>The status of the repository was checked using:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>git status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This command shows which files have been added or modified and confirms that Git is tracking the project.</p>
 <p>The project folder was successfully connected to the GitHub repository. All project files were uploaded to GitHub, confirming that version control has been correctly established using the command line interface.</p>
 </section>
+</section>
+<section id="create-a-new-branch-and-update-the-project" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-new-branch-and-update-the-project">3. Create a New Branch and Update the Project</h2>
+<p>A new branch named <code>testbranch</code> was created to modify the <code>example.qmd</code> file without affecting the main version. Branching allows different versions of a project to be developed independently and supports collaboration in version control systems.</p>
+<section id="step-1-create-a-new-branch" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-create-a-new-branch">Step 1: Create a New Branch</h3>
+<p>A new branch called <code>testbranch</code> was created using the command line interface. Creating a branch allows changes to be made separately from the main project. This prevents accidental changes to the main version and allows different features to be developed independently.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>git branch testbranch</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="step-2-switch-to-the-new-branch" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-switch-to-the-new-branch">Step 2: Switch to the New Branch</h3>
+<p>The working environment was switched to the new branch using below command. Switching branches ensures that any changes made will only affect the selected branch. This allows safe modification of project files.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>git checkout testbranch</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="step-3-modify-the-file-example.qmd" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-modify-the-file-example.qmd">Step 3: Modify the File example.qmd</h3>
+<p>The file <code>example.qmd</code> was opened in RStudio and updated by adding new content. Below modification was added in the testbranch to demonstrate updating a file using version control.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">### Additional Section</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>This is modification for testbranch branch</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="step-4-add-the-updated-file-to-the-repository" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-add-the-updated-file-to-the-repository">Step 4: Add the Updated File to the Repository</h3>
+<p>The modified file was added to the staging area using:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>git add example.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Adding the file prepares the updated version to be recorded in the project history.</p>
+</section>
+<section id="step-5-create-a-commit" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-create-a-commit">Step 5: Create a Commit</h3>
+<p>Creating a commit records the changes and creates a new version of the project that can be tracked over time. The changes were saved as a new version of the project using:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>git commit -m "Update example.qmd in testbranch"</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="step-6-push-the-branch-to-the-remote-repository" class="level3">
+<h3 class="anchored" data-anchor-id="step-6-push-the-branch-to-the-remote-repository">Step 6: Push the Branch to the Remote Repository</h3>
+<p>The new branch (<code>testbranch</code>) and its changes were uploaded to the remote GitHub repository using:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>git push origin testbranch</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Pushing the branch ensures that the updated version of the project is stored on GitHub and can be accessed or reviewed by others.</p>
+</section>
+<section id="step-8-check-the-repository-status-1" class="level3">
+<h3 class="anchored" data-anchor-id="step-8-check-the-repository-status-1">Step 8: Check the Repository Status</h3>
+<p>The repository status was checked using below command. This command confirms that the file has been modified and shows which changes are ready to be saved.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>git status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>As a result, a new branch named <code>testbranch</code> was successfully created. The file <code>example.qmd</code> was modified, and the changes were saved in both the local repository and the remote GitHub repository. This demonstrates how version control can be used to manage updates safely using branches.</p>
+</section>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
 </section>
 
 </main>
