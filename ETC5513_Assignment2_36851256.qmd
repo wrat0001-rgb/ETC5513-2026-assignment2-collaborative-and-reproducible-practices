@@ -1,14 +1,73 @@
 ---
-title: "ETC5513 - Assignment 2"
+title: "ETC5513 - Assignment 2: Git Guide"
 author: "Waranya Ratirotjanakul (36851256)"
-Date: Today
+date: Today
 format: 
     html:
         theme: cosmo
         toc: true
         smooth-scroll: true
-    pdf: 
+    typst: 
         documentclass: article
         toc: true
 ---
 
+This guide demonstrates the basic steps required to create a reproducible project using RStudio and Quarto. Reproducible reporting ensures that analyses can be rerun and produce consistent results by combining code, output, and documentation in a single workflow. The purpose of this guide is to establish the foundation for version control and collaborative practices using Git and GitHub.
+
+# Step 1 — Create a New RStudio Project and example.qmd
+## 1. Create a New RStudio Project
+The first step in creating a reproducible workflow is to create a new RStudio Project. A project provides a structured environment where all files related to the analysis are stored together.
+
+To create a new project in RStudio:
+1) Open RStudio.
+2) Click File → New Project.
+3) Select New Directory.
+4) Select New Project.
+5) Enter a project name (for example, gitguide_project).
+6) Choose a location to save the project.
+7) Click Create Project.
+
+After completing these steps, a new folder containing an `.Rproj` file will be created.
+
+```{r}
+
+```
+
+## 2. Create a Quarto File
+Inside the project folder, create a simple Quarto document named `example.qmd`.
+
+To create the file:
+1) Click File → New File → Quarto Document.
+2) Save the file as `example.qmd` in the project folder.
+
+Below is a simple example of a Quarto document that can be rendered into an HTML file.
+
+- At YMAL:
+
+---
+title: "Example Quarto Document"
+format: html
+---
+
+
+```{r}
+# Simple calculation
+x <- 10
+y <- 5
+x + y
+```
+
+## 3. Render the Quarto File
+To generate the HTML output, click the Render button in RStudio. After rendering, an HTML file named `example.html` will be created in the project folder.
+
+When the file is rendered successfully, the output will display the result of the calculation:
+
+10 + 5 = 15
+
+This confirms that the Quarto document has been successfully knitted into an HTML file and demonstrates the integration of code and output within a reproducible report.
+
+## What Your Folder Should Look Like
+gitguide_project/
+    example.qmd
+    example.html
+    gitguide_project.Rproj
