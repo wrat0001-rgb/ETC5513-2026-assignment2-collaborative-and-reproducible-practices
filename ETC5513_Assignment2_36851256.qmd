@@ -1,7 +1,7 @@
 ---
 title: "ETC5513 - Assignment 2: Git Guide"
 author: "Waranya Ratirotjanakul (36851256)"
-date: Today
+date: today
 format: 
     html:
         theme: cosmo
@@ -12,13 +12,16 @@ format:
         toc: true
 ---
 
-This guide demonstrates the basic steps required to create a reproducible project using RStudio and Quarto. Reproducible reporting ensures that analyses can be rerun and produce consistent results by combining code, output, and documentation in a single workflow. The purpose of this guide is to establish the foundation for version control and collaborative practices using Git and GitHub.
+This guide demonstrates the basic steps required to create a reproducible project using RStudio and Quarto. Reproducible reporting ensures that analyses can be rerun and produce consistent results by combining code, output, and documentation in a single workflow. 
 
-# Step 1 — Create a New RStudio Project and example.qmd
-## 1. Create a New RStudio Project
-The first step in creating a reproducible workflow is to create a new RStudio Project. A project provides a structured environment where all files related to the analysis are stored together.
+The purpose of this guide is to establish the foundation for version control and collaborative practices using Git and GitHub.
+
+# 1. Create a New RStudio Project and Render a Quarto File
+## Step 1: Create a New RStudio Project
+A new RStudio Project was created to organise all files related to the analysis in a single folder. Creating a project ensures that all files are stored in one location and can be easily managed. It also supports reproducibility by keeping the working environment consistent.
 
 To create a new project in RStudio:
+
 1) Open RStudio.
 2) Click File → New Project.
 3) Select New Directory.
@@ -29,45 +32,132 @@ To create a new project in RStudio:
 
 After completing these steps, a new folder containing an `.Rproj` file will be created.
 
-```{r}
+## Step 2: Create a Quarto File Named example.qmd
+Inside the project folder, create a new Quarto document named `example.qmd`, as following steps. The Quarto file allows code, text, and results to be combined into one document. This makes the analysis transparent and reproducible.
 
-```
-
-## 2. Create a Quarto File
-Inside the project folder, create a simple Quarto document named `example.qmd`.
-
-To create the file:
-1) Click File → New File → Quarto Document.
+1) To create the file, click File → New File → Quarto Document.
 2) Save the file as `example.qmd` in the project folder.
+3) Add YMAL at the top of the file between --- (three dashes) to the file. YMAL controls the title, output format, table of content, theme, global settings of the file.
 
-Below is a simple example of a Quarto document that can be rendered into an HTML file.
-
-- At YMAL:
-
+```yaml
 ---
-title: "Example Quarto Document"
-format: html
+title: "Example Quarto Document" 
+subtitle: "Part of ETC5513 Assignment2"
+author: "Your Name" 
+date: today
+format: 
+    html:
+        theme: cosmo
+        toc: true
+    typst: 
+        documentclass: article
+        toc: true
 ---
-
-
-```{r}
-# Simple calculation
-x <- 10
-y <- 5
-x + y
 ```
 
-## 3. Render the Quarto File
-To generate the HTML output, click the Render button in RStudio. After rendering, an HTML file named `example.html` will be created in the project folder.
+4) Text is written in markdown. Below are common markdown syntax.
 
-When the file is rendered successfully, the output will display the result of the calculation:
+- **Adding section and sub-section:** Every `#` create a child sub-section of the parent section.
 
-10 + 5 = 15
+**Markdown syntax:**
+```markdown
+# This is a section
 
-This confirms that the Quarto document has been successfully knitted into an HTML file and demonstrates the integration of code and output within a reproducible report.
+Content goes here.
 
-## What Your Folder Should Look Like
+## This is a sub-section
+
+More content here.
+```
+
+- **Adding text formatting:** Below table is standard Markdown syntax.
+
+| Markdown syntax | Result |
+|---|---|
+| `**bold**` | **bold** |
+| `*italic*` | *italic* |
+| `` `code` `` | `code` |
+| `[link](https://example.com)` | [link](https://example.com) |
+| `~~strikethrough~~` | ~~strikethrough~~ |
+
+- **Adding bullet points:** Use `-` or `*`.
+
+**Markdown syntax:** `- unordered list 1` or `* unordered list1`
+
+**Result:**
+
+- unordered list 1
+
+- **Adding Numbered lists:** Use `1.`, `2.`, etc. to represent first step, second step, etc.
+
+**Markdown syntax:** `1. ordered list 1`
+
+**Result:**
+
+1. ordered list 1
+
+- **Adding images:** Use standard markdown image syntax:
+
+```markdown
+![Caption text](path/to/image.png)
+```
+
+Or control the size with curly braces:
+
+```markdown
+![Caption text](path/to/image.png){width=50%}
+```
+You can also use `fig-align: center` in the YAML or as a chunk option.
+
+5. Code chunks are fenced by delimeters, ```. Chunk output can be customised with chunk execution options, which are at the top of chunk, starting with `#|`
+
+| Option | What it does |
+|---|---|
+| `#| echo: true` | Show the code |
+| `#| echo: false` | Hide the code, show only output |
+| `#| eval: false` | Show code but don't run it |
+| `#| include: false` | Run code silently (no output shown) |
+| `#| warning: false` | Hide warning message in output |
+| `#| error: false` | Hide error message in output |
+| `#| fig-width: 8` | Set figure width (inches) |
+| `#| fig-height: 5` | Set figure height (inches) |
+
+**Code chunk:**
+````markdown
+```r
+#| echo: true
+#| warning: false
+#| error: false
+
+library(tidyverse)
+penguins %>%
+  filter(species == "Adelie") %>%
+  head(5)
+```
+````
+
+**Results:**
+```{r}
+#| echo: true
+#| warning: false
+#| error: false
+
+library(tidyverse)
+penguins %>%
+  filter(species == "Adelie") %>%
+  head(5)
+```
+
+## Step 3: Render the Quarto File into an HTML Document
+To generate the HTML output, click the **Render** button in RStudio. After rendering, an HTML file named `example.html` will be created in the project folder. Rendering the document converts the source file into a final report that includes both the code and the output. This ensures that results are automatically updated whenever the code changes.
+
+When the file is rendered successfully, the output will display the result of the Quarto file. This confirms that the Quarto document has been successfully knitted into an HTML file and demonstrates the integration of code and output within a reproducible report.
+
+## Your Folder Should Look Like
 gitguide_project/
     example.qmd
     example.html
     gitguide_project.Rproj
+
+# 2. Initialise Git and Push to GitHub Using RStudio Project
+

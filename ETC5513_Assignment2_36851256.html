@@ -7,8 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Waranya Ratirotjanakul (36851256)">
+<meta name="dcterms.date" content="2026-05-03">
 
-<title>Example Quarto Document</title>
+<title>ETC5513 - Assignment 2: Git Guide</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -72,20 +73,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="ETC5513_Assignment2_36851256_files/libs/quarto-html/quarto-syntax-highlighting-7c69b197886ae2a34062761d21e44731.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="ETC5513_Assignment2_36851256_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="ETC5513_Assignment2_36851256_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="ETC5513_Assignment2_36851256_files/libs/bootstrap/bootstrap-138a6193a3bd40baf1e627da441a4734.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="ETC5513_Assignment2_36851256_files/libs/bootstrap/bootstrap-8ffd5f67044e5306d9846f29df41dda5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<style>html{ scroll-behavior: smooth; }</style>
 
 
 </head>
 
-<body class="fullcontent quarto-light">
+<body class="quarto-light">
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#create-a-new-rstudio-project-and-render-a-quarto-file" id="toc-create-a-new-rstudio-project-and-render-a-quarto-file" class="nav-link active" data-scroll-target="#create-a-new-rstudio-project-and-render-a-quarto-file">1. Create a New RStudio Project and Render a Quarto File</a>
+  <ul class="collapse">
+  <li><a href="#step-1-create-a-new-rstudio-project" id="toc-step-1-create-a-new-rstudio-project" class="nav-link" data-scroll-target="#step-1-create-a-new-rstudio-project">Step 1: Create a New RStudio Project</a></li>
+  <li><a href="#step-2-create-a-quarto-file-named-example.qmd" id="toc-step-2-create-a-quarto-file-named-example.qmd" class="nav-link" data-scroll-target="#step-2-create-a-quarto-file-named-example.qmd">Step 2: Create a Quarto File Named example.qmd</a></li>
+  <li><a href="#step-3-render-the-quarto-file" id="toc-step-3-render-the-quarto-file" class="nav-link" data-scroll-target="#step-3-render-the-quarto-file">Step 3: Render the Quarto File</a></li>
+  <li><a href="#what-your-folder-should-look-like" id="toc-what-your-folder-should-look-like" class="nav-link" data-scroll-target="#what-your-folder-should-look-like">What Your Folder Should Look Like</a></li>
+  </ul></li>
+  <li><a href="#initialise-git-and-push-to-github-using-rstudio-project" id="toc-initialise-git-and-push-to-github-using-rstudio-project" class="nav-link" data-scroll-target="#initialise-git-and-push-to-github-using-rstudio-project">2. Initialise Git and Push to GitHub Using RStudio Project</a>
+  <ul class="collapse">
+  <li><a href="#step-1-open-the-command-line-interface" id="toc-step-1-open-the-command-line-interface" class="nav-link" data-scroll-target="#step-1-open-the-command-line-interface">Step 1: Open the Command Line Interface</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="ETC5513_Assignment2_36851256.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li></ul></div></nav>
+</div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Example Quarto Document</h1>
+<h1 class="title">ETC5513 - Assignment 2: Git Guide</h1>
 </div>
 
 
@@ -102,7 +122,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Invalid Date</p>
+      <p class="date">May 3, 2026</p>
     </div>
   </div>
   
@@ -114,35 +134,188 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>This guide demonstrates the basic steps required to create a reproducible project using RStudio and Quarto. Reproducible reporting ensures that analyses can be rerun and produce consistent results by combining code, output, and documentation in a single workflow. The purpose of this guide is to establish the foundation for version control and collaborative practices using Git and GitHub.</p>
-<section id="step-1-create-a-new-rstudio-project-and-example.qmd" class="level1">
-<h1>Step 1 — Create a New RStudio Project and example.qmd</h1>
-<section id="create-a-new-rstudio-project" class="level2">
-<h2 class="anchored" data-anchor-id="create-a-new-rstudio-project">1. Create a New RStudio Project</h2>
-<p>The first step in creating a reproducible workflow is to create a new RStudio Project. A project provides a structured environment where all files related to the analysis are stored together.</p>
-<p>To create a new project in RStudio: 1) Open RStudio. 2) Click File → New Project. 3) Select New Directory. 4) Select New Project. 5) Enter a project name (for example, gitguide_project). 6) Choose a location to save the project. 7) Click Create Project.</p>
+<p>This guide demonstrates the basic steps required to create a reproducible project using RStudio and Quarto. Reproducible reporting ensures that analyses can be rerun and produce consistent results by combining code, output, and documentation in a single workflow.</p>
+<p>The purpose of this guide is to establish the foundation for version control and collaborative practices using Git and GitHub.</p>
+<section id="create-a-new-rstudio-project-and-render-a-quarto-file" class="level1">
+<h1>1. Create a New RStudio Project and Render a Quarto File</h1>
+<section id="step-1-create-a-new-rstudio-project" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-create-a-new-rstudio-project">Step 1: Create a New RStudio Project</h2>
+<p>A new RStudio Project was created to organise all files related to the analysis in a single folder. Creating a project ensures that all files are stored in one location and can be easily managed. It also supports reproducibility by keeping the working environment consistent.</p>
+<p>To create a new project in RStudio:</p>
+<ol type="1">
+<li>Open RStudio.</li>
+<li>Click File → New Project.</li>
+<li>Select New Directory.</li>
+<li>Select New Project.</li>
+<li>Enter a project name (for example, gitguide_project).</li>
+<li>Choose a location to save the project.</li>
+<li>Click Create Project.</li>
+</ol>
 <p>After completing these steps, a new folder containing an <code>.Rproj</code> file will be created.</p>
 </section>
-<section id="create-a-quarto-file" class="level2">
-<h2 class="anchored" data-anchor-id="create-a-quarto-file">2. Create a Quarto File</h2>
-<p>Inside the project folder, create a simple Quarto document named <code>example.qmd</code>.</p>
-<p>To create the file: 1) Click File → New File → Quarto Document. 2) Save the file as <code>example.qmd</code> in the project folder.</p>
-<p>Below is a simple example of a Quarto document that can be rendered into an HTML file.</p>
+<section id="step-2-create-a-quarto-file-named-example.qmd" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-create-a-quarto-file-named-example.qmd">Step 2: Create a Quarto File Named example.qmd</h2>
+<p>Inside the project folder, create a new Quarto document named <code>example.qmd</code>, as following steps:</p>
+<ol type="1">
+<li>To create the file, click File → New File → Quarto Document.</li>
+<li>Save the file as <code>example.qmd</code> in the project folder.</li>
+<li>Add YMAL at the top of the file between — (three dashes) to the file. YMAL controls the title, output format, table of content, theme, global settings of the file.</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Example Quarto Document"</span><span class="at"> </span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">subtitle</span><span class="kw">:</span><span class="at"> </span><span class="st">"Part of ETC5513 Assignment2"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Your Name"</span><span class="at"> </span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> today</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> cosmo</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">typst</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">documentclass</span><span class="kw">:</span><span class="at"> article</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="4" type="1">
+<li>Text is written in markdown. Below are common markdown syntax.</li>
+</ol>
 <ul>
-<li>At YMAL:</li>
+<li><strong>Adding section and sub-section:</strong> Every <code>#</code> create a child sub-section of the parent section.</li>
 </ul>
+<p><strong>Markdown syntax:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># This is a section</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>Content goes here.</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## This is a sub-section</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>More content here.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><strong>Adding text formatting:</strong> Below table is standard Markdown syntax.</li>
+</ul>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Markdown syntax</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>**bold**</code></td>
+<td><strong>bold</strong></td>
+</tr>
+<tr class="even">
+<td><code>*italic*</code></td>
+<td><em>italic</em></td>
+</tr>
+<tr class="odd">
+<td><code>`code`</code></td>
+<td><code>code</code></td>
+</tr>
+<tr class="even">
+<td><code>[link](https://example.com)</code></td>
+<td><a href="https://example.com">link</a></td>
+</tr>
+<tr class="odd">
+<td><code>~~strikethrough~~</code></td>
+<td><del>strikethrough</del></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Adding bullet points:</strong> Use <code>-</code> or <code>*</code>.</li>
+</ul>
+<p><strong>Markdown syntax:</strong> <code>- unordered list 1</code> or <code>* unordered list1</code></p>
+<p><strong>Result:</strong></p>
+<ul>
+<li><p>unordered list 1</p></li>
+<li><p>Adding Numbered lists: Use <code>1.</code>, <code>2.</code>, etc. to represent first step, second step, etc.</p></li>
+</ul>
+<p><strong>Markdown syntax:</strong> <code>1. ordered list 1</code></p>
+<p><strong>Result:</strong></p>
+<ol type="1">
+<li>ordered list 1</li>
+</ol>
+<ul>
+<li><strong>Adding images:</strong> Use standard markdown image syntax:</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="al">![Caption text](path/to/image.png)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Or control the size with curly braces:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="al">![Caption text](path/to/image.png)</span>{width=50%}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You can also use <code>fig-align: center</code> in the YAML or as a chunk option.</p>
+<ol start="5" type="1">
+<li>Code chunks are fenced by delimeters, <code>{r}</code>. Chunk output can be customised with chunk execution options, which are at the top of chunk, starting with <code>#|</code></li>
+</ol>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Option</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>#| echo: true</code></td>
+<td>Show the code</td>
+</tr>
+<tr class="even">
+<td><code>#| echo: false</code></td>
+<td>Hide the code, show only output</td>
+</tr>
+<tr class="odd">
+<td><code>#| eval: false</code></td>
+<td>Show code but don’t run it</td>
+</tr>
+<tr class="even">
+<td><code>#| include: false</code></td>
+<td>Run code silently (no output shown)</td>
+</tr>
+<tr class="odd">
+<td><code>#| warning: false</code></td>
+<td>Hide warning message in output</td>
+</tr>
+<tr class="even">
+<td><code>#| error: false</code></td>
+<td>Hide error message in output</td>
+</tr>
+<tr class="odd">
+<td><code>#| fig-width: 8</code></td>
+<td>Set figure width (inches)</td>
+</tr>
+<tr class="even">
+<td><code>#| fig-height: 5</code></td>
+<td>Set figure height (inches)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Code chunk:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">#| error: false</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(species <span class="sc">==</span> <span class="st">"Adelie"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">5</span>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Results:</strong></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Simple calculation</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">10</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="dv">5</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>x <span class="sc">+</span> y</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>penguins <span class="sc">%&gt;%</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(species <span class="sc">==</span> <span class="st">"Adelie"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 15</code></pre>
+<pre><code>  species    island bill_len bill_dep flipper_len body_mass    sex year
+1  Adelie Torgersen     39.1     18.7         181      3750   male 2007
+2  Adelie Torgersen     39.5     17.4         186      3800 female 2007
+3  Adelie Torgersen     40.3     18.0         195      3250 female 2007
+4  Adelie Torgersen       NA       NA          NA        NA   &lt;NA&gt; 2007
+5  Adelie Torgersen     36.7     19.3         193      3450 female 2007</code></pre>
 </div>
 </div>
 </section>
-<section id="render-the-quarto-file" class="level2">
-<h2 class="anchored" data-anchor-id="render-the-quarto-file">3. Render the Quarto File</h2>
+<section id="step-3-render-the-quarto-file" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-render-the-quarto-file">Step 3: Render the Quarto File</h2>
 <p>To generate the HTML output, click the Render button in RStudio. After rendering, an HTML file named <code>example.html</code> will be created in the project folder.</p>
 <p>When the file is rendered successfully, the output will display the result of the calculation:</p>
 <p>10 + 5 = 15</p>
@@ -151,6 +324,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="what-your-folder-should-look-like" class="level2">
 <h2 class="anchored" data-anchor-id="what-your-folder-should-look-like">What Your Folder Should Look Like</h2>
 <p>gitguide_project/ example.qmd example.html gitguide_project.Rproj</p>
+</section>
+</section>
+<section id="initialise-git-and-push-to-github-using-rstudio-project" class="level1">
+<h1>2. Initialise Git and Push to GitHub Using RStudio Project</h1>
+<section id="step-1-open-the-command-line-interface" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-open-the-command-line-interface">Step 1: Open the Command Line Interface</h2>
 </section>
 </section>
 
@@ -561,4 +740,5 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
+<script src="ETC5513_Assignment2_36851256_files/libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
