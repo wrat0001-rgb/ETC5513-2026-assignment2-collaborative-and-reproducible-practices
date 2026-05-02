@@ -91,12 +91,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#step-1-create-a-new-rstudio-project" id="toc-step-1-create-a-new-rstudio-project" class="nav-link" data-scroll-target="#step-1-create-a-new-rstudio-project">Step 1: Create a New RStudio Project</a></li>
   <li><a href="#step-2-create-a-quarto-file-named-example.qmd" id="toc-step-2-create-a-quarto-file-named-example.qmd" class="nav-link" data-scroll-target="#step-2-create-a-quarto-file-named-example.qmd">Step 2: Create a Quarto File Named example.qmd</a></li>
-  <li><a href="#step-3-render-the-quarto-file" id="toc-step-3-render-the-quarto-file" class="nav-link" data-scroll-target="#step-3-render-the-quarto-file">Step 3: Render the Quarto File</a></li>
-  <li><a href="#what-your-folder-should-look-like" id="toc-what-your-folder-should-look-like" class="nav-link" data-scroll-target="#what-your-folder-should-look-like">What Your Folder Should Look Like</a></li>
+  <li><a href="#step-3-render-the-quarto-file-into-an-html-document" id="toc-step-3-render-the-quarto-file-into-an-html-document" class="nav-link" data-scroll-target="#step-3-render-the-quarto-file-into-an-html-document">Step 3: Render the Quarto File into an HTML Document</a></li>
+  <li><a href="#your-folder-should-look-like" id="toc-your-folder-should-look-like" class="nav-link" data-scroll-target="#your-folder-should-look-like">Your Folder Should Look Like</a></li>
   </ul></li>
-  <li><a href="#initialise-git-and-push-to-github-using-rstudio-project" id="toc-initialise-git-and-push-to-github-using-rstudio-project" class="nav-link" data-scroll-target="#initialise-git-and-push-to-github-using-rstudio-project">2. Initialise Git and Push to GitHub Using RStudio Project</a>
+  <li><a href="#connect-the-project-to-github-using-the-command-line-interface" id="toc-connect-the-project-to-github-using-the-command-line-interface" class="nav-link" data-scroll-target="#connect-the-project-to-github-using-the-command-line-interface">2. Connect the Project to GitHub Using the Command Line Interface</a>
   <ul class="collapse">
-  <li><a href="#step-1-open-the-command-line-interface" id="toc-step-1-open-the-command-line-interface" class="nav-link" data-scroll-target="#step-1-open-the-command-line-interface">Step 1: Open the Command Line Interface</a></li>
+  <li><a href="#step-1-create-a-repository-on-github" id="toc-step-1-create-a-repository-on-github" class="nav-link" data-scroll-target="#step-1-create-a-repository-on-github">Step 1: Create a Repository on GitHub</a></li>
+  <li><a href="#step-2-open-the-command-line-interface-in-rstudio" id="toc-step-2-open-the-command-line-interface-in-rstudio" class="nav-link" data-scroll-target="#step-2-open-the-command-line-interface-in-rstudio">Step 2: Open the Command Line Interface in RStudio</a></li>
+  <li><a href="#step-3-clone-the-github-repository" id="toc-step-3-clone-the-github-repository" class="nav-link" data-scroll-target="#step-3-clone-the-github-repository">Step 3: Clone the GitHub Repository</a></li>
+  <li><a href="#step-4-add-project-files-to-the-repository-folder" id="toc-step-4-add-project-files-to-the-repository-folder" class="nav-link" data-scroll-target="#step-4-add-project-files-to-the-repository-folder">Step 4: Add Project Files to the Repository Folder</a></li>
+  <li><a href="#step-5-add-files-to-the-repository" id="toc-step-5-add-files-to-the-repository" class="nav-link" data-scroll-target="#step-5-add-files-to-the-repository">Step 5: Add Files to the Repository</a></li>
+  <li><a href="#step-6-create-a-commit" id="toc-step-6-create-a-commit" class="nav-link" data-scroll-target="#step-6-create-a-commit">Step 6: Create a Commit</a></li>
+  <li><a href="#step-7-push-the-files-to-github" id="toc-step-7-push-the-files-to-github" class="nav-link" data-scroll-target="#step-7-push-the-files-to-github">Step 7: Push the Files to GitHub</a></li>
+  <li><a href="#step-8-check-the-repository-status" id="toc-step-8-check-the-repository-status" class="nav-link" data-scroll-target="#step-8-check-the-repository-status">Step 8: Check the Repository Status</a></li>
   </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="ETC5513_Assignment2_36851256.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li></ul></div></nav>
@@ -155,7 +162,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="step-2-create-a-quarto-file-named-example.qmd" class="level2">
 <h2 class="anchored" data-anchor-id="step-2-create-a-quarto-file-named-example.qmd">Step 2: Create a Quarto File Named example.qmd</h2>
-<p>Inside the project folder, create a new Quarto document named <code>example.qmd</code>, as following steps:</p>
+<p>Inside the project folder, create a new Quarto document named <code>example.qmd</code>, as following steps. The Quarto file allows code, text, and results to be combined into one document. This makes the analysis transparent and reproducible.</p>
 <ol type="1">
 <li>To create the file, click File → New File → Quarto Document.</li>
 <li>Save the file as <code>example.qmd</code> in the project folder.</li>
@@ -228,7 +235,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Result:</strong></p>
 <ul>
 <li><p>unordered list 1</p></li>
-<li><p>Adding Numbered lists: Use <code>1.</code>, <code>2.</code>, etc. to represent first step, second step, etc.</p></li>
+<li><p><strong>Adding Numbered lists:</strong> Use <code>1.</code>, <code>2.</code>, etc. to represent first step, second step, etc.</p></li>
 </ul>
 <p><strong>Markdown syntax:</strong> <code>1. ordered list 1</code></p>
 <p><strong>Result:</strong></p>
@@ -243,7 +250,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="al">![Caption text](path/to/image.png)</span>{width=50%}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>You can also use <code>fig-align: center</code> in the YAML or as a chunk option.</p>
 <ol start="5" type="1">
-<li>Code chunks are fenced by delimeters, <code>{r}</code>. Chunk output can be customised with chunk execution options, which are at the top of chunk, starting with <code>#|</code></li>
+<li>Code chunks are fenced by delimeters, <code></code> . Chunk output can be customised with chunk execution options, which are at the top of chunk, starting with <code>#|</code></li>
 </ol>
 <table class="caption-top table">
 <thead>
@@ -314,22 +321,78 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="step-3-render-the-quarto-file" class="level2">
-<h2 class="anchored" data-anchor-id="step-3-render-the-quarto-file">Step 3: Render the Quarto File</h2>
-<p>To generate the HTML output, click the Render button in RStudio. After rendering, an HTML file named <code>example.html</code> will be created in the project folder.</p>
-<p>When the file is rendered successfully, the output will display the result of the calculation:</p>
-<p>10 + 5 = 15</p>
-<p>This confirms that the Quarto document has been successfully knitted into an HTML file and demonstrates the integration of code and output within a reproducible report.</p>
+<section id="step-3-render-the-quarto-file-into-an-html-document" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-render-the-quarto-file-into-an-html-document">Step 3: Render the Quarto File into an HTML Document</h2>
+<p>To generate the HTML output, click the <strong>Render</strong> button in RStudio. After rendering, an HTML file named <code>example.html</code> will be created in the project folder. Rendering the document converts the source file into a final report that includes both the code and the output. This ensures that results are automatically updated whenever the code changes.</p>
+<p>When the file is rendered successfully, the output will display the result of the Quarto file. This confirms that the Quarto document has been successfully knitted into an HTML file and demonstrates the integration of code and output within a reproducible report.</p>
 </section>
-<section id="what-your-folder-should-look-like" class="level2">
-<h2 class="anchored" data-anchor-id="what-your-folder-should-look-like">What Your Folder Should Look Like</h2>
-<p>gitguide_project/ example.qmd example.html gitguide_project.Rproj</p>
+<section id="your-folder-should-look-like" class="level2">
+<h2 class="anchored" data-anchor-id="your-folder-should-look-like">Your Folder Should Look Like</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>gitguide_project/</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    example.qmd</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    example.html</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    gitguide_project.Rproj</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
-<section id="initialise-git-and-push-to-github-using-rstudio-project" class="level1">
-<h1>2. Initialise Git and Push to GitHub Using RStudio Project</h1>
-<section id="step-1-open-the-command-line-interface" class="level2">
-<h2 class="anchored" data-anchor-id="step-1-open-the-command-line-interface">Step 1: Open the Command Line Interface</h2>
+<section id="connect-the-project-to-github-using-the-command-line-interface" class="level1">
+<h1>2. Connect the Project to GitHub Using the Command Line Interface</h1>
+<p>The project folder (<code>gitguide_project</code>) was connected to a GitHub repository using the command line interface. This allows project files to be tracked, shared, and synchronised using version control.</p>
+<section id="step-1-create-a-repository-on-github" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-create-a-repository-on-github">Step 1: Create a Repository on GitHub</h2>
+<p>A new repository was created on GitHub to store the project files online. Creating a repository on GitHub provides a remote location to store and share project files. It allows version control to be used for collaboration and backup.</p>
+<p>To create the repository:</p>
+<ol type="1">
+<li>Open a web browser and go to <a href="https://github.com" class="uri">https://github.com</a></li>
+<li>Click New repository</li>
+<li>Enter the repository name: <code>gitguide_project</code></li>
+<li>Select Public</li>
+<li>Add a README file</li>
+<li>Click Create repository</li>
+</ol>
+</section>
+<section id="step-2-open-the-command-line-interface-in-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-open-the-command-line-interface-in-rstudio">Step 2: Open the Command Line Interface in RStudio</h2>
+<p>The terminal was opened in RStudio to run Git commands. The command line interface allows Git commands to be executed directly within the project folder, enabling version control operations.</p>
+<p>To open the terminal: Tools → Terminal → New Terminal</p>
+</section>
+<section id="step-3-clone-the-github-repository" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-clone-the-github-repository">Step 3: Clone the GitHub Repository</h2>
+<p>Cloning the repository creates a local copy of the GitHub repository and automatically sets up version control for the project.</p>
+<p>The GitHub repository was downloaded to the local computer by the SSH key from GitHub using the following command: <code>git clone https://github.com/username/gitguide_project.git</code></p>
+<p>After running the command, a new folder named <code>gitguide_project</code> was created.</p>
+</section>
+<section id="step-4-add-project-files-to-the-repository-folder" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-add-project-files-to-the-repository-folder">Step 4: Add Project Files to the Repository Folder</h2>
+<p>All project files must be inside the repository folder so that Git can track changes to those files. So, place files created in 1 into the cloned repository folder.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>gitguide_project/</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    example.qmd</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    example.html</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    gitguide_project.Rproj</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="step-5-add-files-to-the-repository" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-add-files-to-the-repository">Step 5: Add Files to the Repository</h2>
+<p>All files were added to the staging area using:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>git add .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Adding files prepares them to be saved in the repository.</p>
+</section>
+<section id="step-6-create-a-commit" class="level2">
+<h2 class="anchored" data-anchor-id="step-6-create-a-commit">Step 6: Create a Commit</h2>
+<p>The files were updated to local repository using:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>git commit -m "Add project files"</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>A commit records the current state of the project and creates a version history.</p>
+</section>
+<section id="step-7-push-the-files-to-github" class="level2">
+<h2 class="anchored" data-anchor-id="step-7-push-the-files-to-github">Step 7: Push the Files to GitHub</h2>
+<p>The files were uploaded to the remote GitHub repository (<code>gitguide_project</code>) using:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>git push</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Pushing synchronises the local project with the remote repository, ensuring that all files are stored online and can be shared.</p>
+</section>
+<section id="step-8-check-the-repository-status" class="level2">
+<h2 class="anchored" data-anchor-id="step-8-check-the-repository-status">Step 8: Check the Repository Status</h2>
+<p>The status of the repository was checked using:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>git status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This command shows which files have been added or modified and confirms that Git is tracking the project.</p>
+<p>The project folder was successfully connected to the GitHub repository. All project files were uploaded to GitHub, confirming that version control has been correctly established using the command line interface.</p>
 </section>
 </section>
 

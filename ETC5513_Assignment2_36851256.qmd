@@ -109,7 +109,7 @@ Or control the size with curly braces:
 ```
 You can also use `fig-align: center` in the YAML or as a chunk option.
 
-5. Code chunks are fenced by delimeters, ```. Chunk output can be customised with chunk execution options, which are at the top of chunk, starting with `#|`
+5. Code chunks are fenced by delimeters, ``` ``` . Chunk output can be customised with chunk execution options, which are at the top of chunk, starting with `#|`
 
 | Option | What it does |
 |---|---|
@@ -154,10 +154,78 @@ To generate the HTML output, click the **Render** button in RStudio. After rende
 When the file is rendered successfully, the output will display the result of the Quarto file. This confirms that the Quarto document has been successfully knitted into an HTML file and demonstrates the integration of code and output within a reproducible report.
 
 ## Your Folder Should Look Like
+````markdown
 gitguide_project/
     example.qmd
     example.html
     gitguide_project.Rproj
+````
 
-# 2. Initialise Git and Push to GitHub Using RStudio Project
+# 2. Connect the Project to GitHub Using the Command Line Interface
+The project folder (`gitguide_project`) was connected to a GitHub repository using the command line interface. This allows project files to be tracked, shared, and synchronised using version control.
 
+## Step 1: Create a Repository on GitHub
+A new repository was created on GitHub to store the project files online. Creating a repository on GitHub provides a remote location to store and share project files. It allows version control to be used for collaboration and backup.
+
+To create the repository:
+
+1) Open a web browser and go to <https://github.com>
+2) Click New repository
+3) Enter the repository name: `gitguide_project`
+4) Select Public
+5) Add a README file
+6) Click Create repository
+
+## Step 2: Open the Command Line Interface in RStudio
+The terminal was opened in RStudio to run Git commands. The command line interface allows Git commands to be executed directly within the project folder, enabling version control operations.
+
+To open the terminal: Tools → Terminal → New Terminal
+
+## Step 3: Clone the GitHub Repository
+Cloning the repository creates a local copy of the GitHub repository and automatically sets up version control for the project.
+
+The GitHub repository was downloaded to the local computer by the SSH key from GitHub using the following command:
+`git clone https://github.com/username/gitguide_project.git`
+
+After running the command, a new folder named `gitguide_project` was created.
+
+## Step 4: Add Project Files to the Repository Folder
+All project files must be inside the repository folder so that Git can track changes to those files. So, place files created in 1 into the cloned repository folder.
+
+````markdown
+gitguide_project/
+    example.qmd
+    example.html
+    gitguide_project.Rproj
+````
+
+## Step 5: Add Files to the Repository
+All files were added to the staging area using:
+````markdown 
+git add .
+````
+Adding files prepares them to be saved in the repository.
+
+## Step 6: Create a Commit
+The files were updated to local repository using:
+````markdown 
+git commit -m "Add project files"
+````
+
+A commit records the current state of the project and creates a version history.
+
+## Step 7: Push the Files to GitHub
+The files were uploaded to the remote GitHub repository (`gitguide_project`) using:
+````markdown 
+git push
+````
+Pushing synchronises the local project with the remote repository, ensuring that all files are stored online and can be shared.
+
+## Step 8: Check the Repository Status
+The status of the repository was checked using: 
+````markdown 
+git status
+```` 
+This command shows which files have been added or modified and confirms that Git is tracking the project.
+
+The project folder was successfully connected to the GitHub repository. All project files were uploaded to GitHub, confirming that version control has been correctly established using the command line interface.
