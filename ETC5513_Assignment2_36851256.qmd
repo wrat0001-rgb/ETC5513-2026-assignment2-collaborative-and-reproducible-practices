@@ -1,0 +1,14 @@
+---
+title: "ETC5513 - Assignment 2"
+author: "Waranya Ratirotjanakul (36851256)"
+Date: Today
+format: 
+    html:
+        theme: cosmo
+        toc: true
+        smooth-scroll: true
+    pdf: 
+        documentclass: article
+        toc: true
+---
+
