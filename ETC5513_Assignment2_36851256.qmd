@@ -258,7 +258,7 @@ The file `example.qmd` was opened in RStudio and updated by adding new content. 
 
 ````markdown 
 ### Additional Section
-This is modification for testbranch branch
+This content was added in testbranch.
 ````
 ### Step 4: Add the Updated File to the Repository
 The modified file was added to the staging area using:
@@ -374,4 +374,77 @@ Pushing the changes ensures that the remote repository contains the latest versi
 
 ### Step 6:
 add git status ??
+
+## 6. Merge Changes from testbranch into main and Resolve a Merge Conflict
+The changes from `testbranch` were merged into the `main` branch. Because the file `example.qmd` was modified differently in both branches in the previous tasks, a merge conflict occurred. The conflict was then resolved manually, and the updated version of the project was pushed to GitHub.
+
+### Step 1: Merge testbranch into main
+The changes from `testbranch` were merged into the `main` branch using the following command:
+````markdown 
+git merge testbranch
+````
+
+Running this command attempts to combine the changes from both branches into a single version of the project. Because the same file was modified differently in each branch, Git was unable to automatically merge the changes and reported a merge conflict.
+
+### Step 2: Show the Merge Conflict
+After running the merge command, Git displayed a message indicating that a conflict had occurred. The conflict lines are usually marked with <<<<<<< ot ======= or >>>>>>>.
+
+**Example output:**
+````markdown
+Auto-merging example.qmd
+CONFLICT (content): Merge conflict in example.qmd
+Automatic merge failed; fix conflicts and then commit the result.
+The file example.qmd contained conflict markers similar to the following:
+
+<<<<<<< HEAD
+## Updated Section in Main Branch
+This content was added in the main branch.
+=======
+## Additional Section
+This content was added in testbranch.
+>>>>>>> testbranch
+````
+
+These markers indicate the conflicting changes from both branches and show where manual resolution is required.
+
+### Step 3: Fix the Merge Conflict
+The file example.qmd was opened in RStudio, and the conflicting sections were reviewed. The final version of the file was edited to keep the desired content and remove the conflict markers.
+
+**Example resolved version:**
+````markdown
+## Updated Section 
+This section combines the updates from both the main branch and testbranch.
+````
+
+Resolving the conflict manually ensures that the correct version of the file is saved and that the project remains consistent.
+
+### Step 4: Add the Resolved File to the Repository
+After fixing the conflict, the updated file was added to the staging area using:
+````markdown
+git add example.qmd
+````
+
+Adding the resolved file tells Git that the conflict has been handled and the file is ready to be recorded in the project history.
+
+### Step 5: Commit the Merge
+The merge was completed by creating a commit using:
+````markdown
+git commit -m "Resolve merge conflict between main and testbranch"
+````
+This command records the resolved version of the project and finalises the merge process.
+
+### Step 6: Push the Changes to GitHub
+The updated project was uploaded to the remote repository using:
+````markdown
+git push origin main
+````
+Pushing the changes ensures that the resolved version of the project is synchronised with the GitHub repository.
+
+### Step 7: Check the Repository Status
+The repository status was checked using:
+````markdown
+git status
+````
+
+The changes from `testbranch` were successfully merged into the `main` branch. A merge conflict occurred because the same file was modified differently in both branches, and the conflict was resolved manually. The final version of the project was committed and pushed to GitHub, confirming that the repository history is consistent and up to date.
 
