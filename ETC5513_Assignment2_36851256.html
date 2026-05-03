@@ -155,6 +155,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#step-2-delete-the-branch-on-the-remote-repository" id="toc-step-2-delete-the-branch-on-the-remote-repository" class="nav-link" data-scroll-target="#step-2-delete-the-branch-on-the-remote-repository">Step 2: Delete the Branch on the Remote Repository</a></li>
   <li><a href="#step-3-verify-the-branch-has-been-deleted" id="toc-step-3-verify-the-branch-has-been-deleted" class="nav-link" data-scroll-target="#step-3-verify-the-branch-has-been-deleted">Step 3: Verify the Branch Has Been Deleted</a></li>
   </ul></li>
+  <li><a href="#show-the-commit-log-in-condensed-form-in-the-terminal" id="toc-show-the-commit-log-in-condensed-form-in-the-terminal" class="nav-link" data-scroll-target="#show-the-commit-log-in-condensed-form-in-the-terminal">9. Show the Commit Log in Condensed Form in the Terminal</a>
+  <ul class="collapse">
+  <li><a href="#step-1-show-the-commit-log-in-condensed-form" id="toc-step-1-show-the-commit-log-in-condensed-form" class="nav-link" data-scroll-target="#step-1-show-the-commit-log-in-condensed-form">Step 1: Show the Commit Log in Condensed Form</a></li>
+  </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="ETC5513_Assignment2_36851256.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li></ul></div></nav>
 </div>
@@ -685,6 +689,22 @@ $ year        &lt;int&gt; 2007, 2007, 2007, 2007, 2007</code></pre>
 <p>The list of branches was checked to confirm that <code>testbranch</code> had been successfully removed.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>git branch</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This command displays the remaining local branches and confirms that only the required branches are still available.</p>
+</section>
+</section>
+<section id="show-the-commit-log-in-condensed-form-in-the-terminal" class="level2">
+<h2 class="anchored" data-anchor-id="show-the-commit-log-in-condensed-form-in-the-terminal">9. Show the Commit Log in Condensed Form in the Terminal</h2>
+<p>The commit history of the repository was displayed in condensed form using the command line interface. Viewing the commit log allows the sequence of changes made to the project to be reviewed and confirms that all tasks have been recorded correctly in the version control history.</p>
+<section id="step-1-show-the-commit-log-in-condensed-form" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-show-the-commit-log-in-condensed-form">Step 1: Show the Commit Log in Condensed Form</h3>
+<p>The condensed commit log was displayed using the following command:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>git log --oneline</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This command shows a simplified version of the commit history, displaying each commit as a single line that includes the commit hash and commit message. Using the condensed format makes it easier to quickly review the sequence of changes made to the project.</p>
+<p><strong>Results:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>a1b2c3d Resolve merge conflict between main and testbranch</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>d4e5f6g Modify example.qmd in main branch</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>h7i8j9k Update example.qmd in testbranch</span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>l0m1n2o Add data folder</span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>p3q4r5s Initial commit</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
 

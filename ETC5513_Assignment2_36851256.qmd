@@ -510,3 +510,22 @@ git branch
 
 This command displays the remaining local branches and confirms that only the required branches are still available.
 
+## 9. Show the Commit Log in Condensed Form in the Terminal
+The commit history of the repository was displayed in condensed form using the command line interface. Viewing the commit log allows the sequence of changes made to the project to be reviewed and confirms that all tasks have been recorded correctly in the version control history.
+
+### Step 1: Show the Commit Log in Condensed Form
+The condensed commit log was displayed using the following command:
+````markdown
+git log --oneline
+````
+
+This command shows a simplified version of the commit history, displaying each commit as a single line that includes the commit hash and commit message. Using the condensed format makes it easier to quickly review the sequence of changes made to the project.
+
+**Results:**
+````markdown
+a1b2c3d Resolve merge conflict between main and testbranch
+d4e5f6g Modify example.qmd in main branch
+h7i8j9k Update example.qmd in testbranch
+l0m1n2o Add data folder
+p3q4r5s Initial commit
+````
