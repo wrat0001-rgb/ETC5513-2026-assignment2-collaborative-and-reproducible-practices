@@ -142,6 +142,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#step-6-push-the-changes-to-github" id="toc-step-6-push-the-changes-to-github" class="nav-link" data-scroll-target="#step-6-push-the-changes-to-github">Step 6: Push the Changes to GitHub</a></li>
   <li><a href="#step-7-check-the-repository-status" id="toc-step-7-check-the-repository-status" class="nav-link" data-scroll-target="#step-7-check-the-repository-status">Step 7: Check the Repository Status</a></li>
   </ul></li>
+  <li><a href="#tag-the-commit-v1.0-on-main-using-an-annotated-tag" id="toc-tag-the-commit-v1.0-on-main-using-an-annotated-tag" class="nav-link" data-scroll-target="#tag-the-commit-v1.0-on-main-using-an-annotated-tag">7. Tag the Commit v1.0 on main Using an Annotated Tag</a>
+  <ul class="collapse">
+  <li><a href="#step-1-ensure-the-working-branch-is-main" id="toc-step-1-ensure-the-working-branch-is-main" class="nav-link" data-scroll-target="#step-1-ensure-the-working-branch-is-main">Step 1: Ensure the Working Branch is main</a></li>
+  <li><a href="#step-2-create-an-annotated-tag" id="toc-step-2-create-an-annotated-tag" class="nav-link" data-scroll-target="#step-2-create-an-annotated-tag">Step 2: Create an Annotated Tag</a></li>
+  <li><a href="#step-3-verify-the-tag" id="toc-step-3-verify-the-tag" class="nav-link" data-scroll-target="#step-3-verify-the-tag">Step 3: Verify the Tag</a></li>
+  <li><a href="#step-4-push-the-tag-to-github" id="toc-step-4-push-the-tag-to-github" class="nav-link" data-scroll-target="#step-4-push-the-tag-to-github">Step 4: Push the Tag to GitHub</a></li>
+  </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="ETC5513_Assignment2_36851256.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li></ul></div></nav>
 </div>
@@ -622,6 +629,34 @@ $ year        &lt;int&gt; 2007, 2007, 2007, 2007, 2007</code></pre>
 <p>The repository status was checked using:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>git status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The changes from <code>testbranch</code> were successfully merged into the <code>main</code> branch. A merge conflict occurred because the same file was modified differently in both branches, and the conflict was resolved manually. The final version of the project was committed and pushed to GitHub, confirming that the repository history is consistent and up to date.</p>
+</section>
+</section>
+<section id="tag-the-commit-v1.0-on-main-using-an-annotated-tag" class="level2">
+<h2 class="anchored" data-anchor-id="tag-the-commit-v1.0-on-main-using-an-annotated-tag">7. Tag the Commit v1.0 on main Using an Annotated Tag</h2>
+<p>An annotated tag named <code>v1.0</code> was created on the <code>main</code> branch to mark a specific version of the project. Tags are used in version control systems to identify important milestones, such as a completed assignment or release version. Creating an annotated tag records additional information, including the tag name, message, and date, making it easier to track significant versions of the project.</p>
+<section id="step-1-ensure-the-working-branch-is-main" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-ensure-the-working-branch-is-main">Step 1: Ensure the Working Branch is main</h3>
+<p>The current branch was checked to confirm that the tagging operation would be applied to the main branch.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>git branch</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This command displays the list of branches and highlights the current working branch. Confirming the branch ensures that the tag is applied to the correct version of the project.</p>
+</section>
+<section id="step-2-create-an-annotated-tag" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-create-an-annotated-tag">Step 2: Create an Annotated Tag</h3>
+<p>An annotated tag named <code>v1.0</code> was created using the following command:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>git tag -a v1.0 -m "Version 1.0 release"</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This command creates an annotated tag with a descriptive message, allowing the tagged version of the project to be clearly identified in the repository history.</p>
+</section>
+<section id="step-3-verify-the-tag" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-verify-the-tag">Step 3: Verify the Tag</h3>
+<p>The tag was verified by listing all tags in the repository:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>git tag</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This command confirms that the tag <code>v1.0</code> has been successfully created.</p>
+</section>
+<section id="step-4-push-the-tag-to-github" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-push-the-tag-to-github">Step 4: Push the Tag to GitHub</h3>
+<p>The annotated tag was uploaded to the remote repository using:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>git push origin v1.0</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Pushing the tag ensures that the tagged version of the project is available on GitHub and can be referenced by others.</p>
 </section>
 </section>
 

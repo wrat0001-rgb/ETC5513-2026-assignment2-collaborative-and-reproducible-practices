@@ -448,3 +448,38 @@ git status
 
 The changes from `testbranch` were successfully merged into the `main` branch. A merge conflict occurred because the same file was modified differently in both branches, and the conflict was resolved manually. The final version of the project was committed and pushed to GitHub, confirming that the repository history is consistent and up to date.
 
+## 7. Tag the Commit v1.0 on main Using an Annotated Tag
+An annotated tag named `v1.0` was created on the `main` branch to mark a specific version of the project. Tags are used in version control systems to identify important milestones, such as a completed assignment or release version. Creating an annotated tag records additional information, including the tag name, message, and date, making it easier to track significant versions of the project.
+
+### Step 1: Ensure the Working Branch is main
+The current branch was checked to confirm that the tagging operation would be applied to the main branch.
+````markdown
+git branch
+````
+
+This command displays the list of branches and highlights the current working branch. Confirming the branch ensures that the tag is applied to the correct version of the project.
+
+### Step 2: Create an Annotated Tag
+An annotated tag named `v1.0` was created using the following command:
+````markdown
+git tag -a v1.0 -m "Version 1.0 release"
+````
+
+This command creates an annotated tag with a descriptive message, allowing the tagged version of the project to be clearly identified in the repository history.
+
+### Step 3: Verify the Tag
+The tag was verified by listing all tags in the repository:
+````markdown
+git tag
+````
+
+This command confirms that the tag `v1.0` has been successfully created.
+
+### Step 4: Push the Tag to GitHub
+The annotated tag was uploaded to the remote repository using:
+````markdown
+git push origin v1.0
+````
+
+Pushing the tag ensures that the tagged version of the project is available on GitHub and can be referenced by others.
+
