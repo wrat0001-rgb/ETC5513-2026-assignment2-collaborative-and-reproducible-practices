@@ -279,7 +279,7 @@ git push origin testbranch
 ````
 Pushing the branch ensures that the updated version of the project is stored on GitHub and can be accessed or reviewed by others.
 
-### Step 8: Check the Repository Status
+### Step 8: Check the Repository Status <-- revised
 The repository status was checked using below command. This command confirms that the file has been modified and shows which changes are ready to be saved.
 ````markdown 
 git status
@@ -290,14 +290,14 @@ As a result, a new branch named `testbranch` was successfully created. The file 
 ## 4. Add a Data Folder and Amend the Previous Commit <-- need revision
 A new folder named `data` was created to store the dataset from Assignment 1. Storing data in a dedicated folder helps organise project files and supports reproducibility by keeping all resources required for the analysis in a consistent location. The previous commit was then amended to include the new data folder so that the repository history accurately reflects the complete project structure.
 
-## Step 1: Create a Folder Named data
+### Step 1: Create a Folder Named data
 A new folder called `data` was created inside the project directory to store the dataset from Assignment 1. This was done by creating a new folder in the project panel in RStudio or using the command line:
 ````markdown 
 mkdir data
 ````
 Creating a dedicated data folder ensures that datasets are organised separately from code and documentation, making the project easier to manage and reproduce.
 
-## Step 2: Add the Data from Assignment 1 to the data Folder
+### Step 2: Add the Data from Assignment 1 to the data Folder
 The dataset from Assignment 1 was copied into the newly created `data` folder.
 ````markdown 
 gitguide_project/
@@ -306,21 +306,21 @@ gitguide_project/
 ````
 Placing the dataset in the project folder ensures that all files required for the analysis are included in the repository and can be accessed by others when the project is shared.
 
-## Step 3: Add the Data Folder to the Repository
+### Step 3: Add the Data Folder to the Repository
 The new folder and its contents were added to the staging area using:
 ````markdown 
 git add data
 ````
 Adding the folder prepares the new files to be included in the repository so that changes can be recorded.
 
-## Step 4: Amend the Previous Commit
+### Step 4: Amend the Previous Commit
 The previous commit was updated to include the data folder using the following command:
 ````markdown 
 git commit --amend --no-edit
 ````
 Amending the previous commit updates the most recent commit instead of creating a new one, ensuring that the project history reflects the addition of the data folder as part of the same version of the project.
 
-## Step 5: Push the Amended Commit to the Remote Repository
+### Step 5: Push the Amended Commit to the Remote Repository
 The amended commit was pushed to the remote repository using:
 ````markdown 
 git push --force
@@ -328,3 +328,50 @@ git push --force
 This command updates the remote repository to match the amended local commit, ensuring that the data folder is included in the shared version of the project.
 
 Finally, a folder named `data` was successfully created and populated with the dataset from Assignment 1. The previous commit was amended to include the data folder, and the updated commit was pushed to the remote repository. This confirms that the repository now contains all required project files, including the dataset.
+
+## 5. Modify the Main Branch to Create a Conflict with testbranch
+The working environment was switched back to the `main` branch, and the file `example.qmd` was modified in a different way from the changes made in `testbranch`. Making different changes to the same file in separate branches creates a conflict situation, which demonstrates how version control systems manage competing updates from multiple sources.
+
+### Step 1: Switch Back to the Main Branch
+The working branch was changed from `testbranch` back to main using the following command:
+````markdown 
+git checkout main
+````
+Switching back to the `main` branch ensures that any new changes will be applied to the main version of the project rather than the test branch.
+
+### Step 2: Modify the File example.qmd
+The file `example.qmd` was opened in RStudio in `main` branch and updated by adding different content from the changes previously made in `testbranch` as follow.
+
+````markdown 
+## Updated Section in Main Branch 
+This content was added in the main branch.
+````
+
+Making a different change to the same file in another branch is necessary to create a conflict scenario, which is commonly encountered when multiple contributors modify the same file.
+
+### Step 3: Add the Updated File to the Repository
+The modified file was added to the staging area using:
+````markdown 
+git add example.qmd
+````
+Adding the file prepares the updated version to be saved in the repository.
+
+### Step 4: Commit the Changes
+The changes were saved as a new version of the project using:
+````markdown 
+git commit -m "Modify example.qmd in main branch"
+````
+
+Creating a commit records the changes in the project history and ensures that the modification can be tracked over time.
+
+### Step 5: Push the Changes to the Remote Repository
+The updated version of the project was uploaded to the remote repository using:
+````markdown 
+git push origin main
+````
+
+Pushing the changes ensures that the remote repository contains the latest version of the project.
+
+### Step 6:
+add git status ??
+
