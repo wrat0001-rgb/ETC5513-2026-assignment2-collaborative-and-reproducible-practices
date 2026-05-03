@@ -159,6 +159,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#step-1-show-the-commit-log-in-condensed-form" id="toc-step-1-show-the-commit-log-in-condensed-form" class="nav-link" data-scroll-target="#step-1-show-the-commit-log-in-condensed-form">Step 1: Show the Commit Log in Condensed Form</a></li>
   </ul></li>
+  <li><a href="#create-a-plot-commit-the-changes-and-undo-the-commit-without-losing-local-changes" id="toc-create-a-plot-commit-the-changes-and-undo-the-commit-without-losing-local-changes" class="nav-link" data-scroll-target="#create-a-plot-commit-the-changes-and-undo-the-commit-without-losing-local-changes">10. Create a Plot, Commit the Changes, and Undo the Commit Without Losing Local Changes</a>
+  <ul class="collapse">
+  <li><a href="#step-1-ensure-the-working-branch-is-main-1" id="toc-step-1-ensure-the-working-branch-is-main-1" class="nav-link" data-scroll-target="#step-1-ensure-the-working-branch-is-main-1">Step 1: Ensure the Working Branch is main</a></li>
+  <li><a href="#step-2-create-a-new-section-in-example.qmd-with-a-simple-plot" id="toc-step-2-create-a-new-section-in-example.qmd-with-a-simple-plot" class="nav-link" data-scroll-target="#step-2-create-a-new-section-in-example.qmd-with-a-simple-plot">Step 2: Create a New Section in example.qmd with a Simple Plot</a></li>
+  <li><a href="#step-3-add-the-updated-file-to-the-repository-1" id="toc-step-3-add-the-updated-file-to-the-repository-1" class="nav-link" data-scroll-target="#step-3-add-the-updated-file-to-the-repository-1">Step 3: Add the Updated File to the Repository</a></li>
+  <li><a href="#step-4-commit-the-changes-1" id="toc-step-4-commit-the-changes-1" class="nav-link" data-scroll-target="#step-4-commit-the-changes-1">Step 4: Commit the Changes</a></li>
+  <li><a href="#step-5-undo-the-commit-without-losing-local-changes" id="toc-step-5-undo-the-commit-without-losing-local-changes" class="nav-link" data-scroll-target="#step-5-undo-the-commit-without-losing-local-changes">Step 5: Undo the Commit Without Losing Local Changes</a></li>
+  <li><a href="#step-6-verify-the-changes-remain" id="toc-step-6-verify-the-changes-remain" class="nav-link" data-scroll-target="#step-6-verify-the-changes-remain">Step 6: Verify the Changes Remain</a></li>
+  </ul></li>
+  <li><a href="#ai-acknowledgement" id="toc-ai-acknowledgement" class="nav-link" data-scroll-target="#ai-acknowledgement">AI Acknowledgement</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="ETC5513_Assignment2_36851256.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li></ul></div></nav>
 </div>
@@ -706,6 +716,56 @@ $ year        &lt;int&gt; 2007, 2007, 2007, 2007, 2007</code></pre>
 <span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>l0m1n2o Add data folder</span>
 <span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>p3q4r5s Initial commit</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
+</section>
+<section id="create-a-plot-commit-the-changes-and-undo-the-commit-without-losing-local-changes" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-plot-commit-the-changes-and-undo-the-commit-without-losing-local-changes">10. Create a Plot, Commit the Changes, and Undo the Commit Without Losing Local Changes</h2>
+<p>A new section containing a simple plot was added to the file <code>example.qmd</code> on the <code>main</code> branch. The changes were committed to the local repository and then undone using the command line interface without losing the local modifications. This demonstrates how version control systems allow mistakes to be corrected while preserving work.</p>
+<section id="step-1-ensure-the-working-branch-is-main-1" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-ensure-the-working-branch-is-main-1">Step 1: Ensure the Working Branch is main</h3>
+<p>The current branch was checked to confirm that the changes would be made on the <code>main</code> branch.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>git branch</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This command displays the list of branches and confirms that main is the active branch, ensuring that the changes are applied to the correct version of the project.</p>
+</section>
+<section id="step-2-create-a-new-section-in-example.qmd-with-a-simple-plot" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-create-a-new-section-in-example.qmd-with-a-simple-plot">Step 2: Create a New Section in example.qmd with a Simple Plot</h3>
+<p>The file <code>example.qmd</code> was opened in RStudio, and a new section containing a plot was added and then saved.</p>
+<p><strong>Content added to the file:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb48"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Scatter plot creation</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>#| echo: true</span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>#| warning: false</span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>#| error: false</span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a>ggplot(penguins, aes(x = flipper_len, y = body_mass, colour = species)) +</span>
+<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a>  geom_point()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="step-3-add-the-updated-file-to-the-repository-1" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-add-the-updated-file-to-the-repository-1">Step 3: Add the Updated File to the Repository</h3>
+<p>The modified file was added to the staging area using:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb49"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>git add example.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Adding the file prepares the updated version to be saved in the local repository history.</p>
+</section>
+<section id="step-4-commit-the-changes-1" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-commit-the-changes-1">Step 4: Commit the Changes</h3>
+<p>The changes were saved as a new version of the project using:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb50"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>git commit -m "Add simple plot section to example.qmd"</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Creating a commit records the new version of the project and allows the change to be tracked.</p>
+</section>
+<section id="step-5-undo-the-commit-without-losing-local-changes" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-undo-the-commit-without-losing-local-changes">Step 5: Undo the Commit Without Losing Local Changes</h3>
+<p>The most recent commit was undone while keeping the local changes using the following command:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb51"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>git reset --soft HEAD~1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This command moves the repository pointer back one commit but keeps the modified files in the staging area, ensuring that the work is not lost.</p>
+</section>
+<section id="step-6-verify-the-changes-remain" class="level3">
+<h3 class="anchored" data-anchor-id="step-6-verify-the-changes-remain">Step 6: Verify the Changes Remain</h3>
+<p>The repository status was checked again using:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb52"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>git status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This command confirms that the changes are still present locally even though the commit has been undone.</p>
+</section>
+</section>
+<section id="ai-acknowledgement" class="level2">
+<h2 class="anchored" data-anchor-id="ai-acknowledgement">AI Acknowledgement</h2>
 </section>
 
 </main>

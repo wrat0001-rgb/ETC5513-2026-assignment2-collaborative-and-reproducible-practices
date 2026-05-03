@@ -529,3 +529,64 @@ h7i8j9k Update example.qmd in testbranch
 l0m1n2o Add data folder
 p3q4r5s Initial commit
 ````
+
+## 10. Create a Plot, Commit the Changes, and Undo the Commit Without Losing Local Changes
+A new section containing a simple plot was added to the file `example.qmd` on the `main` branch. The changes were committed to the local repository and then undone using the command line interface without losing the local modifications. This demonstrates how version control systems allow mistakes to be corrected while preserving work.
+
+### Step 1: Ensure the Working Branch is main
+The current branch was checked to confirm that the changes would be made on the `main` branch.
+````markdown
+git branch
+````
+
+This command displays the list of branches and confirms that main is the active branch, ensuring that the changes are applied to the correct version of the project.
+
+### Step 2: Create a New Section in example.qmd with a Simple Plot
+The file `example.qmd` was opened in RStudio, and a new section containing a plot was added and then saved.
+
+**Content added to the file:**
+````markdown
+## Scatter plot creation
+ 
+#| echo: true
+#| warning: false
+#| error: false
+
+ggplot(penguins, aes(x = flipper_len, y = body_mass, colour = species)) +
+  geom_point()
+````
+
+### Step 3: Add the Updated File to the Repository
+The modified file was added to the staging area using:
+````markdown
+git add example.qmd
+````
+
+Adding the file prepares the updated version to be saved in the local repository history.
+
+### Step 4: Commit the Changes
+The changes were saved as a new version of the project using:
+````markdown
+git commit -m "Add simple plot section to example.qmd"
+````
+
+Creating a commit records the new version of the project and allows the change to be tracked.
+
+### Step 5: Undo the Commit Without Losing Local Changes
+The most recent commit was undone while keeping the local changes using the following command:
+````markdown 
+git reset --soft HEAD~1
+````
+
+This command moves the repository pointer back one commit but keeps the modified files in the staging area, ensuring that the work is not lost.
+
+### Step 6: Verify the Changes Remain
+The repository status was checked again using:
+````markdown 
+git status
+````
+
+This command confirms that the changes are still present locally even though the commit has been undone.
+
+
+## AI Acknowledgement
