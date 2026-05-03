@@ -483,3 +483,30 @@ git push origin v1.0
 
 Pushing the tag ensures that the tagged version of the project is available on GitHub and can be referenced by others.
 
+## 8. Delete the Branch testbranch Locally and on the Remote Repository
+The branch `testbranch` was deleted after its changes had been successfully merged into the `main` branch. Deleting branches that are no longer needed helps keep the repository organised and prevents confusion about which versions of the project are still active.
+
+### Step 1: Delete the Branch Locally
+The branch `testbranch` was deleted from the local repository using the following command:
+````markdown
+git branch -d testbranch
+````
+
+This command removes the branch from the local repository after confirming that its changes have already been merged, ensuring that no important work is lost.
+
+### Step 2: Delete the Branch on the Remote Repository
+The branch `testbranch` was also removed from the remote repository on GitHub using:
+````markdown
+git push origin --delete testbranch
+````
+
+This command deletes the branch from the remote repository, ensuring that the remote repository matches the local repository and remains organised.
+
+### Step 3: Verify the Branch Has Been Deleted
+The list of branches was checked to confirm that `testbranch` had been successfully removed.
+````markdown
+git branch
+````
+
+This command displays the remaining local branches and confirms that only the required branches are still available.
+
