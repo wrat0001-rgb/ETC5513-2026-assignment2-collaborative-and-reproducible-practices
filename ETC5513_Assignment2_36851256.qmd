@@ -129,10 +129,16 @@ You can also use `fig-align: center` in the YAML or as a chunk option.
 #| warning: false
 #| error: false
 
+# load library
 library(tidyverse)
-penguins %>%
-  filter(species == "Adelie") %>%
+
+# filter only adelie penguins
+adelie_penguins <- penguins |>
+  filter(species == "Adelie") |>
   head(5)
+
+# inspect data
+glimpse(adelie_penguins)
 ```
 ````
 
@@ -142,10 +148,16 @@ penguins %>%
 #| warning: false
 #| error: false
 
+# load library
 library(tidyverse)
-penguins %>%
-  filter(species == "Adelie") %>%
+
+# filter only adelie penguins
+adelie_penguins <- penguins |>
+  filter(species == "Adelie") |>
   head(5)
+
+# inspect data
+glimpse(adelie_penguins)
 ```
 
 ### Step 3: Render the Quarto File into an HTML Document
@@ -158,6 +170,7 @@ When the file is rendered successfully, the output will display the result of th
 gitguide_project/
     example.qmd
     example.html
+    example.pdf
     gitguide_project.Rproj
 ````
 
@@ -278,4 +291,5 @@ git status
 
 As a result, a new branch named `testbranch` was successfully created. The file `example.qmd` was modified, and the changes were saved in both the local repository and the remote GitHub repository. This demonstrates how version control can be used to manage updates safely using branches.
 
-## 
+## 4. Add a Data Folder and Amend the Previous Commit
+A new folder named `data` was created to store the dataset from Assignment 1. Storing data in a dedicated folder helps organise project files and supports reproducibility by keeping all resources required for the analysis in a consistent location. The previous commit was then amended to include the new data folder so that the repository history accurately reflects the complete project structure.
