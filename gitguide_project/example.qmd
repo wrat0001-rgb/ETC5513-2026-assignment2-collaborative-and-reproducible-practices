@@ -7,9 +7,6 @@ format:
     html:
         theme: cosmo
         toc: true
-    typst: 
-        documentclass: article
-        toc: true
 ---
 
 # Header
